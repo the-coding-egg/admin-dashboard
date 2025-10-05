@@ -72,9 +72,13 @@ h6 {
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
   grid-column: 2 / 3;
   background-color: cyan;
+}
+
+.bottomleftheader {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .sidebar {
@@ -88,16 +92,65 @@ h6 {
   display: grid;
   grid-row: 2 / 3;
   background-color: yellowgreen;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+.maintitlespace {
+  grid-column: 1 / 3;
+}
+
+.projectcards {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 20px 1fr 1fr 1fr;
+}
+
+.rightsideannouncements {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .card {
   border: solid black 1px;
+  width: 300px;
 }
 
-.announcements {
+.mainannouncements {
   border: solid purple 1px;
+}
+
+.singleannouncement {
+  display: grid;
+  gap: 15px;
+  border: solid red 1px;
+}
+
+.announcementcards {
+  display: grid;
+  gap: 15px;
+  grid-template-rows: 20px 1fr;
 }
 
 .trendingcard {
   border: solid darkblue 1px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.firsttrend,
+.secondtrend,
+.thirdtrend,
+.fourthtrend {
+  border: solid darkred 1px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+
+.picture {
+  grid-row: 1 / 3;
+  place-content: center;
 }
